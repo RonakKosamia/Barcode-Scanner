@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/controllers.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="demo">
+  <!-- all the views are loaded into ion-nav-view. It acts like a template. -->
+  <!-- ALL VIEW STATES LOADED IN HERE -->
+<ion-nav-view></ion-nav-view>
+
+<script id="root.html" type="text/ng-template">
+    <ion-view title="License Agreement">
+
+      <ion-nav-bar class="bar-positive"></ion-nav-bar>
+      <ion-content has-header="true" padding="true">
+
+          <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis ex a luctus rutrum. Maecenas vitae lorem sed mauris faucibus fermentum. Proin vel dapibus ligula, vel fringilla mauris. Nunc eleifend, felis vel consequat vehicula, ligula ipsum convallis mauris, non ornare metus velit sit amet neque. Vestibulum aliquam consequat ullamcorper. Nulla facilisi. Nam rutrum, augue vel lacinia faucibus, odio urna consectetur odio, hendrerit vehicula lectus metus sit amet ligula. Pellentesque ac elit risus. Etiam eleifend euismod enim non sodales. Aliquam erat volutpat. Suspendisse et vehicula erat. Praesent ut gravida erat. Praesent iaculis tellus sem, id rhoncus felis convallis in.
+
+          Donec id odio vitae quam lacinia tincidunt. Ut mattis cursus urna id congue. In id nulla neque. Sed urna mi, mattis a eros sollicitudin, condimentum pharetra lacus. Cras eros diam, cursus eget neque et, rhoncus auctor nibh. Suspendisse fringilla urna mauris, quis maximus justo aliquet et. Sed eget hendrerit libero. Maecenas fringilla feugiat erat, eu tempor tellus semper ut. Ut quis ex pellentesque, mattis arcu sed, vestibulum tellus.
+
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis ex a luctus rutrum. Maecenas vitae lorem sed mauris faucibus fermentum. Proin vel dapibus ligula, vel fringilla mauris. Nunc eleifend, felis vel consequat vehicula, ligula ipsum convallis mauris, non ornare metus velit sit amet neque. Vestibulum aliquam consequat ullamcorper. Nulla facilisi. Nam rutrum, augue vel lacinia faucibus, odio urna consectetur odio, hendrerit vehicula lectus metus sit amet ligula. Pellentesque ac elit risus. Etiam eleifend euismod enim non sodales. Aliquam erat volutpat. Suspendisse et vehicula erat. Praesent ut gravida erat. Praesent iaculis tellus sem, id rhoncus felis convallis in.
+
+          Donec id odio vitae quam lacinia tincidunt. Ut mattis cursus urna id congue. In id nulla neque. Sed urna mi, mattis a eros sollicitudin, condimentum pharetra lacus. Cras eros diam, cursus eget neque et, rhoncus auctor nibh. Suspendisse fringilla urna mauris, quis maximus justo aliquet et. Sed eget hendrerit libero. Maecenas fringilla feugiat erat, eu tempor tellus semper ut. Ut quis ex pellentesque, mattis arcu sed, vestibulum tellus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis ex a luctus rutrum. Maecenas vitae lorem sed mauris faucibus fermentum. Proin vel dapibus ligula, vel fringilla mauris. Nunc eleifend, felis vel consequat vehicula, ligula ipsum convallis mauris, non ornare metus velit sit amet neque. Vestibulum aliquam consequat ullamcorper. Nulla facilisi. Nam rutrum, augue vel lacinia faucibus, odio urna consectetur odio, hendrerit vehicula lectus metus sit amet ligula. Pellentesque ac elit risus. Etiam eleifend euismod enim non sodales. Aliquam erat volutpat. Suspendisse et vehicula erat. Praesent ut gravida erat. Praesent iaculis tellus sem, id rhoncus felis convallis in.
+
+          Donec id odio vitae quam lacinia tincidunt. Ut mattis cursus urna id congue. In id nulla neque. Sed urna mi, mattis a eros sollicitudin, condimentum pharetra lacus. Cras eros diam, cursus eget neque et, rhoncus auctor nibh. Suspendisse fringilla urna mauris, quis maximus justo aliquet et. Sed eget hendrerit libero. Maecenas fringilla feugiat erat, eu tempor tellus semper ut. Ut quis ex pellentesque, mattis arcu sed, vestibulum tellus.
+        </p>
+        <center>
+        <a class="button button-full button-positive" nav-clear ui-sref="fst.home">Agree</a>
+        </center>
+      </ion-content>
+
+    </ion-view>
+
+
+</script>
+<!-- abstract holder for the sidemenu page -->
+
+<script id="fst-abstract.html" type="text/ng-template">
+
+    <ion-side-menus>
+      <ion-side-menu-content ng-controller="NavController">
+
+        <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+          <ion-nav-back-button class="button-clear">
+           <ion-icon name="arrow-back"></ion-icon>
+          </ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="fst" animation="slide-left-right"></ion-nav-view>
+
+      </ion-side-menu-content>
+      <ion-side-menu side="left" ng-controller="NavController">
+
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Age Verification App</h1>
+          <img src ="" />
+        </ion-header-bar>
+        <ion-content has-header="true">
+          <ul class="list">
+            <a ui-sref='fst.home' class="item" ng-click="toggleLeft()">Home</a>
+            <a class="item">Setting</a>
+            <a ui-sref="fst.second" class="item" ng-click="toggleLeft()">About Us</a>
+          </ul>
+        </ion-content>
+
+      </ion-side-menu>
+    </ion-side-menus>
+
+</script>
+<script id="fst-home.html" type="text/ng-template">
+    <ion-view title="Home">
+
+      <ion-nav-buttons side="left">
+
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+
+      </ion-nav-buttons>
+      <ion-content has-header="true" padding="true">
+       <center>
+        <img align="center" src="img/Our_logo.png" alt="Mountain View" style="width:304px;height:228px;">
+
+
+
+        <h3>Age Verification App</h3>
+        <a class="button button-full button-positive" nav-clear ui-sref="fst.scannerFail">Start Scanning</a>
+           <div  class="item">
+            <button class="button button-block button-positive">
+            <i class="icon ion-qr-scanner"></i>
+            Scan Now
+            </button>
+        </div>
+        </center>
+      </ion-content>
+
+    </ion-view>
+</script>
+<script id="fst-first.html" type="text/ng-template">
+    <ion-view title="Fst - Single First">
+
+      <ion-content has-header="true" padding="true">
+        It just a single page with the back button in the nav bar. Back to the Fst Section, of course.
+      </ion-content>
+
+    </ion-view>
+</script>
+<script id="fst-second.html" type="text/ng-template">
+    <ion-view title="About Us">
+    <ion-content has-header="true" padding="true">
+
+     <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis ex a luctus rutrum. Maecenas vitae lorem sed mauris faucibus fermentum. Proin vel dapibus ligula, vel fringilla mauris. Nunc eleifend, felis vel consequat vehicula, ligula ipsum convallis mauris, non ornare metus velit sit amet neque. Vestibulum aliquam consequat ullamcorper. Nulla facilisi. Nam rutrum, augue vel lacinia faucibus, odio urna consectetur odio, hendrerit vehicula lectus metus sit amet ligula. Pellentesque ac elit risus. Etiam eleifend euismod enim non sodales. Aliquam erat volutpat. Suspendisse et vehicula erat. Praesent ut gravida erat. Praesent iaculis tellus sem, id rhoncus felis convallis in.
+
+          Donec id odio vitae quam lacinia tincidunt. Ut mattis cursus urna id congue. In id nulla neque. Sed urna mi, mattis a eros sollicitudin, condimentum pharetra lacus. Cras eros diam, cursus eget neque et, rhoncus auctor nibh. Suspendisse fringilla urna mauris, quis maximus justo aliquet et. Sed eget hendrerit libero. Maecenas fringilla feugiat erat, eu tempor tellus semper ut. Ut quis ex pellentesque, mattis arcu sed, vestibulum tellus.
+
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis ex a luctus rutrum. Maecenas vitae lorem sed mauris faucibus fermentum. Proin vel dapibus ligula, vel fringilla mauris. Nunc eleifend, felis vel consequat vehicula, ligula ipsum convallis mauris, non ornare metus velit sit amet neque. Vestibulum aliquam consequat ullamcorper. Nulla facilisi. Nam rutrum, augue vel lacinia faucibus, odio urna consectetur odio, hendrerit vehicula lectus metus sit amet ligula. Pellentesque ac elit risus. Etiam eleifend euismod enim non sodales. Aliquam erat volutpat. Suspendisse et vehicula erat. Praesent ut gravida erat. Praesent iaculis tellus sem, id rhoncus felis convallis in.
+
+          Donec id odio vitae quam lacinia tincidunt. Ut mattis cursus urna id congue. In id nulla neque. Sed urna mi, mattis a eros sollicitudin, condimentum pharetra lacus. Cras eros diam, cursus eget neque et, rhoncus auctor nibh. Suspendisse fringilla urna mauris, quis maximus justo aliquet et. Sed eget hendrerit libero. Maecenas fringilla feugiat erat, eu tempor tellus semper ut. Ut quis ex pellentesque, mattis arcu sed, vestibulum tellus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis ex a luctus rutrum. Maecenas vitae lorem sed mauris faucibus fermentum. Proin vel dapibus ligula, vel fringilla mauris. Nunc eleifend, felis vel consequat vehicula, ligula ipsum convallis mauris, non ornare metus velit sit amet neque. Vestibulum aliquam consequat ullamcorper. Nulla facilisi. Nam rutrum, augue vel lacinia faucibus, odio urna consectetur odio, hendrerit vehicula lectus metus sit amet ligula. Pellentesque ac elit risus. Etiam eleifend euismod enim non sodales. Aliquam erat volutpat. Suspendisse et vehicula erat. Praesent ut gravida erat. Praesent iaculis tellus sem, id rhoncus felis convallis in.
+
+          Donec id odio vitae quam lacinia tincidunt. Ut mattis cursus urna id congue. In id nulla neque. Sed urna mi, mattis a eros sollicitudin, condimentum pharetra lacus. Cras eros diam, cursus eget neque et, rhoncus auctor nibh. Suspendisse fringilla urna mauris, quis maximus justo aliquet et. Sed eget hendrerit libero. Maecenas fringilla feugiat erat, eu tempor tellus semper ut. Ut quis ex pellentesque, mattis arcu sed, vestibulum tellus.
+        </p>
+    </ion-content>
+
+
+    </ion-view>
+</script>
+
+<script id="manual-check.html" type="text/ng-template">
+    <ion-view title="Manual Check">
+    <ion-content has-header="true" padding="true">
+
+
+        <label class="item item-input">
+        <span class="input-label">Date Of Birth</span>
+        <input type="date">
+        </label>
+
+        <center>
+          <button class="button button-full button-positive" type="submit">
+            Verify
+          </button>
+        </center>
+
+
+      </ion-content>
+
+
+
+</script>
+    <script id="scan-success.html" type="text/ng-template">
+
+
+    </script>
+
+<script id="scan-unable.html" type="text/ng-template">
+    <ion-view title="Scan Failed">
+    <ion-content  has-header="true" padding="true">
+
+         <center>
+       <ion-label> Unable to Scan</ion-label>
+
+        <div>
+          <button class="button button-full button-positive" type="submit">
+            Try Again
+          </button>
+          <button class="button button-full button-positive" ui-sref = "fst.scanner">
+            Verify Manually
+          </button>
+          <button class="button button-full button-positive" ui-sref = "fst.home">
+            Cancel
+          </button>
+          </div>
+        </center>
+
+
+      </ion-content>
+
+
+
+</script>
+
+<!-- Modal stating that they cannot use the app without accepting license agreement -->
+<script id="la-disagree-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Warning</h1>
+    </ion-header-bar>
+    <ion-content>
+
+    <p>  Are you sure? You will not be able to use this app if you disagree to the License Agreement. </p>
+     <center><div>
+        <a class="button button-halfwidth" nav-clear ng-click="closeApp()">Yes</a>
+        <a class="button button-halfwidth pull-right" nav-clear ng-click="closeModal()">No</a><div></center>
+
+    </ion-content>
+  </ion-modal-view>
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+.title-image {
+    margin-top: 8px;
+    height: 27px;
+}
+.bottomAligned {
+	 position: fixed;
+	 bottom = 0px;
+	 right = 0px;
+}
+.parent{
+	position: relative;
+}
